@@ -1,4 +1,4 @@
-# sa10kin/homebrew-tap
+# sucrin/homebrew-tap
 
 自建 Homebrew tap —— 收录 macOS 上**没有官方 cask** 的应用。
 
@@ -8,15 +8,15 @@
 ## 用法
 
 ```bash
-brew tap sa10kin/tap
-brew install --cask sa10kin/tap/<name>
+brew tap sucrin/tap
+brew install --cask sucrin/tap/<name>
 ```
 
 声明式使用（`~/nix-config/modules/homebrew.nix`）：
 
 ```nix
-taps  = [ "sa10kin/tap" ];
-casks = [ "sa10kin/tap/tty7" ];
+taps  = [ "sucrin/tap" ];
+casks = [ "sucrin/tap/tty7" ];
 ```
 
 ## 约定
@@ -24,7 +24,7 @@ casks = [ "sa10kin/tap/tty7" ];
 - **只放 arm64（Apple Silicon）资产**。本机是 aarch64-darwin，不做 Intel 兼容。
 - `version :latest` + `sha256 :no_check` 仅用于**上游 URL 不含版本号**的情况
   （永远指向 latest，无法固定校验和）。⚠️ 这类没有完整性校验。
-- 每个 cask 都带 `livecheck`，可用 `brew livecheck --cask sa10kin/tap/<name>` 查上游新版，
+- 每个 cask 都带 `livecheck`，可用 `brew livecheck --cask sucrin/tap/<name>` 查上游新版，
   `brew bump-cask-pr` 之类的工具也能用。
 - `zap` 段按 bundle ID 生成标准四件套（Application Support / Caches / Preferences /
   Saved Application State）。**不保证完整**——各应用私有的残留路径需要时再补。
