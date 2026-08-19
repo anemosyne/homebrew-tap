@@ -1,0 +1,23 @@
+cask "hereisland" do
+  version "2026.8.12"
+  sha256 "80b6e29d44f63c54eff019d3f99372323f3348aa456f6d16ac7c9a75fb91b216"
+
+  url "https://github.com/locusable-studio/HereIsland/releases/download/v#{version}/HereIsland-#{version}.dmg"
+  name "Here Island"
+  desc "Dynamic Island for macOS"
+  homepage "https://github.com/locusable-studio/HereIsland"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "Here Island.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.locusable.hereisland",
+    "~/Library/Caches/com.locusable.hereisland",
+    "~/Library/Preferences/com.locusable.hereisland.plist",
+    "~/Library/Saved Application State/com.locusable.hereisland.savedState",
+  ]
+end
