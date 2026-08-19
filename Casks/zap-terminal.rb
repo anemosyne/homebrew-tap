@@ -1,4 +1,4 @@
-cask "zap" do
+cask "zap-terminal" do
   version "2026.07.09.1"
   sha256 "885281050b501478dd96a2e501f11283ab06a59bb8a9c469cfd32b7fb30eef39"
 
