@@ -1,5 +1,5 @@
 cask "floating-browser" do
-  version "0.1.15"
+  version "0.1.16"
   sha256 "7a20b02a2424dccc14cec9106a850d3d46de00e6bf909a61bb78dffc63647557"
 
   url "https://floating-browser.xyptkd.cn/downloads/floating-browser-#{version}-macos-arm64.dmg"
