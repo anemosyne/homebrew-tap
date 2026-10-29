@@ -45,4 +45,5 @@ jobs:
                 echo "::endgroup::"
               done
 
-          git push origin "HEAD:$GITHUB_REF_NAME"
+          # setup-homebrew 会重置 checkout 存的凭据，这里显式带 token
+          git push "https://x-access-token:${HOMEBREW_GITHUB_API_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:$GITHUB_REF_NAME"
