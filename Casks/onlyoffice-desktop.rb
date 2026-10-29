@@ -1,6 +1,6 @@
 cask "onlyoffice-desktop" do
-  version "9.4.0"
-  sha256 "e965be2222609add6b5a70baa2a8cdb599402491fb2925825d9039dcb154beb4"
+  version "10.0.0"
+  sha256 "9095cc8c46f1206237d690c7e146fada0d72dbf7f40c035cd5fd218b680c2deb"
 
   url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-arm.dmg"
   name "ONLYOFFICE"
