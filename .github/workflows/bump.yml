@@ -2,7 +2,7 @@ name: bump
 
 on:
   schedule:
-    - cron: "0 1 * * *" # 每天 09:00 (UTC+8)
+    - cron: "0 1 * * 1" # 每周一 09:00 (UTC+8)
   workflow_dispatch:
 
 permissions:
@@ -31,8 +31,8 @@ jobs:
           tap="${GITHUB_REPOSITORY/homebrew-/}"
 
           # 个别 cask 查不到版本时 livecheck 会非零退出，不影响其余的
-          # :latest 的 cask（tessoa、veilwin）没东西可 bump，livecheck 会跳过
-          brew livecheck --tap "$tap" --json --newer-only --quiet > livecheck.json || true
+          # --extract-plist：tessoa、veilwin 的 URL 不含版本，要下载 dmg 读 Info.plist
+          brew livecheck --tap "$tap" --extract-plist --json --newer-only --quiet > livecheck.json || true
 
           jq -r '.[] | select(.version.outdated) | "\(.cask) \(.version.latest)"' livecheck.json \
             | while read -r cask ver; do

@@ -22,10 +22,12 @@ casks = [ "sucrin/tap/tty7" ];
 ## 约定
 
 - **只放 arm64（Apple Silicon）资产**。本机是 aarch64-darwin，不做 Intel 兼容。
-- `version :latest` + `sha256 :no_check` 仅用于**上游 URL 不含版本号**的情况
-  （永远指向 latest，无法固定校验和）。⚠️ 这类没有完整性校验。
-- 每个 cask 都带 `livecheck`，可用 `brew livecheck --cask sucrin/tap/<name>` 查上游新版，
-  `brew bump-cask-pr` 之类的工具也能用。
+- **上游 URL 不含版本号**的（tessoa、veilwin）写真实 `version` + `sha256 :no_check`，
+  livecheck 用 `:extract_plist` 下载 dmg 读版本。URL 永远指向 latest，无法固定校验和。
+  ⚠️ 这类没有完整性校验。
+- 每个 cask 都带 `livecheck`，可用 `brew livecheck --cask sucrin/tap/<name>` 查上游新版。
+- `.github/workflows/bump.yml` 每周一自动 livecheck + `brew bump-cask-pr`，直接提交到 main；
+  也可在 Actions 页手动触发。
 - `zap` 段按 bundle ID 生成标准四件套（Application Support / Caches / Preferences /
   Saved Application State）。**不保证完整**——各应用私有的残留路径需要时再补。
 

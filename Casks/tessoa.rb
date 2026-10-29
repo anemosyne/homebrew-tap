@@ -1,5 +1,5 @@
 cask "tessoa" do
-  version :latest
+  version "0.29.3,20261025.184811"
   sha256 :no_check
 
   url "https://download.tessoa.com/tessoa/latest/tessoa-macos-aarch64.dmg"
