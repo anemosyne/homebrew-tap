@@ -1,6 +1,6 @@
 cask "birth" do
-  version "0.2.10"
-  sha256 "34c4b1282ef2bc2b07dc7c4c2c14696a739685e9201397920fea3807d74136fa"
+  version "0.2.11"
+  sha256 "eecb9e505fef5c4c0e0ea8e68651901a1377cce290c7ccde29559be709dcff81"
 
   url "https://github.com/iAmCorey/birth/releases/download/v#{version}/Birth-#{version}.dmg"
   name "Birth"
