@@ -1,6 +1,6 @@
 cask "okvideomac" do
-  version "0.3.41"
-  sha256 "3b469542cca39a8f82387fe8530420d977fd5d57706f9d67756249cd1873cfb0"
+  version "0.9.0"
+  sha256 "e4aae1e3adb038ac48ff0a7228fab1c828977e1d23317fdbad85df8224dbc013"
 
   url "https://github.com/yaolin-dev/OKVideoMac/releases/download/v#{version}/OKVideoMac-#{version}.dmg"
   name "OKVideoMac"
