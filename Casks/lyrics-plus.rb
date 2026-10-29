@@ -1,6 +1,6 @@
 cask "lyrics-plus" do
-  version "2.1.1"
-  sha256 "6bcb7a6a9b2b090c772ff223dd826e7433c20c6678bed99dcb7abae5003954ef"
+  version "2.2.20"
+  sha256 "7560f40ba9bbea18c44396828ed62b7165d75c766deb9c20648c942eb6f78c3d"
 
   url "https://github.com/afeibukaixin/Lyrics-Plus/releases/download/v#{version}/Lyrics.Plus_#{version}_aarch64.dmg"
   name "Lyrics Plus"
