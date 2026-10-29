@@ -1,6 +1,6 @@
 cask "fluxdown" do
-  version "0.4.7"
-  sha256 "257bc3e872361fb55c0fa55c449b4189865c683ccf0a04b2e813b0bf5e4132a0"
+  version "0.6.3"
+  sha256 "5421fa66e28d3e022500bc9a23cdad7eefab401e6e7db10cd0ff2c465ae97319"
 
   url "https://github.com/zerx-lab/FluxDown/releases/download/v#{version}/FluxDown-#{version}-macos-arm64.dmg"
   name "FluxDown"
