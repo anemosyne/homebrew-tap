@@ -1,6 +1,6 @@
 cask "openasr-desktop" do
-  version "0.1.21"
-  sha256 "143ee2c00f00de759691f55334ab16026ce0349cd1eb682edd95a2e793ee05a5"
+  version "0.1.24"
+  sha256 "a7c27ba412f80d8a32c690541696b6cb05a6d6b4f7d4798516784d7a4ff8a155"
 
   url "https://github.com/QuintinShaw/openasr/releases/download/desktop-v#{version}/OpenASR-Desktop-#{version}-aarch64.dmg"
   name "OpenASR Desktop"
