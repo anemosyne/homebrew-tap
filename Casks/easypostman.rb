@@ -1,6 +1,6 @@
 cask "easypostman" do
-  version "6.0.19"
-  sha256 "423a316edc6412fc3d0ac46d231ec577b0b65410708c905499db65cbf2eb21b5"
+  version "6.2.9"
+  sha256 "5c69cdbdf0a28e8110e720dc79e468c4b43b283a03d0d5f08539497a33fe8f68"
 
   url "https://github.com/lakernote/easy-postman/releases/download/v#{version}/EasyPostman-#{version}-macos-arm64.dmg"
   name "EasyPostman"
