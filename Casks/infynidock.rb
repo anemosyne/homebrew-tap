@@ -1,6 +1,6 @@
 cask "infynidock" do
-  version "2.18.2"
-  sha256 "ad93bb867e858a469b9ebdbe7275dec7565f80d62172096f1f728de685ac78c8"
+  version "2.22.18"
+  sha256 "c61d2bbcf003357c354fdedf99e8858902466cc797843f308ce39538d9e5c054"
 
   url "https://github.com/yeelone/InfyniDock/releases/download/#{version}/InfyniDock-Installer-#{version}.dmg"
   name "InfyniDock"
