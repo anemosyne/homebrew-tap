@@ -1,6 +1,6 @@
 cask "clickmate" do
-  version "1.3.1"
-  sha256 "bbd0051297b12a05a480da3ace7ff0529d529c67ec54d4c6867fe72cd0888726"
+  version "1.3.7"
+  sha256 "629bd3b8b3bac3cf642b3c50cee61544e1d585f63b8eecb46ff2264d842bd9b7"
 
   url "https://github.com/Funnyrz/ClickMate/releases/download/v#{version}/ClickMate-#{version}-universal-unsigned.dmg"
   name "ClickMate"
