@@ -1,6 +1,6 @@
 cask "kubebar" do
-  version "1.7.0"
-  sha256 "2f02ce180441316c06f542d52a1191d9223620d8872e1707b7b4cc1f7f1a64f3"
+  version "1.7.2"
+  sha256 "237f998ca5414238266246f5d9da639ee761e5ef787c5693388e4841dd80ac99"
 
   url "https://kubebar.app/download/Kubebar-#{version}.dmg"
   name "Kubebar"
