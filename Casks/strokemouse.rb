@@ -1,6 +1,6 @@
 cask "strokemouse" do
-  version "0.0.23"
-  sha256 "6d9eca4ca012d1a67b7898789702a6b1661398506f153a0a4d52c51ae4c5d84b"
+  version "0.0.36"
+  sha256 "8bbe1bab8b672d527945637192f109dfb4e473842bb5cdb0e15e00f25399fa43"
 
   url "https://github.com/Licoy/StrokeMouse/releases/download/v#{version}/StrokeMouse-macos-arm64.dmg"
   name "StrokeMouse"
