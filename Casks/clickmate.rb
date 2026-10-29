@@ -12,6 +12,8 @@ cask "clickmate" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "ClickMate.app"
 
   zap trash: [

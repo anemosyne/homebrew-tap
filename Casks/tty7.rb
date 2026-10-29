@@ -12,6 +12,8 @@ cask "tty7" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "tty7.app"
 
   zap trash: [

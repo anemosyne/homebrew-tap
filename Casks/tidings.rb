@@ -5,12 +5,14 @@ cask "tidings" do
   url "https://download.tidings.info/macos/stable/Tidings-#{version}-universal.dmg"
   name "Tidings"
   desc "AI-native RSS reader with summaries and translation"
-  homepage "https://tidings.info"
+  homepage "https://tidings.info/"
 
   livecheck do
     url "https://download.tidings.info/macos/stable/latest-mac.yml"
     strategy :electron_builder
   end
+
+  depends_on :macos
 
   app "Tidings.app"
 

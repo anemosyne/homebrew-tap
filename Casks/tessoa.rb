@@ -5,12 +5,14 @@ cask "tessoa" do
   url "https://download.tessoa.com/tessoa/latest/tessoa-macos-aarch64.dmg"
   name "tessoa"
   desc "GPU-accelerated file manager written in Rust"
-  homepage "https://tessoa.com"
+  homepage "https://tessoa.com/"
 
   livecheck do
     url :url
     strategy :extract_plist
   end
+
+  depends_on :macos
 
   app "tessoa.app"
 

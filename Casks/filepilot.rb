@@ -4,13 +4,15 @@ cask "filepilot" do
 
   url "https://github.com/birdyzzz/FilePilot/releases/download/v#{version}/FilePilot-#{version}-macOS.dmg"
   name "FilePilot"
-  desc "File type association manager for macOS"
+  desc "File type association manager"
   homepage "https://github.com/birdyzzz/FilePilot"
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "FilePilot.app"
 

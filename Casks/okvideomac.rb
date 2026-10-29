@@ -4,13 +4,15 @@ cask "okvideomac" do
 
   url "https://github.com/yaolin-dev/OKVideoMac/releases/download/v#{version}/OKVideoMac-#{version}.dmg"
   name "OKVideoMac"
-  desc "Native macOS video client with libmpv playback"
+  desc "Native video client with libmpv playback"
   homepage "https://github.com/yaolin-dev/OKVideoMac"
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "OKVideoMac.app"
 

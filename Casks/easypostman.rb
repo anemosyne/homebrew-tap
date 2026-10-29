@@ -12,6 +12,8 @@ cask "easypostman" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "EasyPostman.app"
 
   zap trash: [

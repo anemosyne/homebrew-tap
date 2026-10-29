@@ -12,6 +12,8 @@ cask "lyrics-plus" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Lyrics Plus.app"
 
   zap trash: [

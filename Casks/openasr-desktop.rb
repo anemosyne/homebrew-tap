@@ -14,6 +14,8 @@ cask "openasr-desktop" do
     strategy :github_releases
   end
 
+  depends_on :macos
+
   app "OpenASR Desktop.app"
 
   zap trash: [

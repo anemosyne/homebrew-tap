@@ -5,12 +5,14 @@ cask "kubebar" do
   url "https://kubebar.app/download/Kubebar-#{version}.dmg"
   name "Kubebar"
   desc "Native Kubernetes menu bar app"
-  homepage "https://kubebar.app"
+  homepage "https://kubebar.app/"
 
   livecheck do
     url :homepage
     regex(/Kubebar[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on :macos
 
   app "Kubebar.app"
 

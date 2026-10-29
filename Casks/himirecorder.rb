@@ -12,6 +12,8 @@ cask "himirecorder" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "HimiRecorder.app"
 
   zap trash: [

@@ -4,13 +4,15 @@ cask "hereisland" do
 
   url "https://github.com/locusable-studio/HereIsland/releases/download/v#{version}/HereIsland-#{version}.dmg"
   name "Here Island"
-  desc "Dynamic Island for macOS"
+  desc "Dynamic Island-style notch overlay"
   homepage "https://github.com/locusable-studio/HereIsland"
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "Here Island.app"
 

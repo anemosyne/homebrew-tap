@@ -5,12 +5,14 @@ cask "floating-browser" do
   url "https://floating-browser.xyptkd.cn/downloads/floating-browser-#{version}-macos-arm64.dmg"
   name "悬浮浏览器"
   desc "Floating window browser"
-  homepage "https://floating-browser.xyptkd.cn"
+  homepage "https://floating-browser.xyptkd.cn/"
 
   livecheck do
     url :homepage
     regex(/floating-browser[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]arm64\.dmg/i)
   end
+
+  depends_on :macos
 
   app "悬浮浏览器.app"
 

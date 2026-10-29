@@ -12,6 +12,8 @@ cask "oxideterm" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "OxideTerm.app"
 
   zap trash: [

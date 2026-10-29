@@ -5,12 +5,14 @@ cask "veilwin" do
   url "https://download.floweb.cn/veilwin_latest_universal.dmg"
   name "veilwin"
   desc "Window-level dimming focus tool"
-  homepage "https://www.veilwin.com"
+  homepage "https://www.veilwin.com/"
 
   livecheck do
     url :url
     strategy :extract_plist
   end
+
+  depends_on :macos
 
   app "veilwin.app"
 

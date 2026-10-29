@@ -12,6 +12,8 @@ cask "noonmark" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Noonmark.app"
 
   zap trash: [

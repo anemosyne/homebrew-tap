@@ -12,6 +12,8 @@ cask "imference-desktop-go" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "imference-desktop-go.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "mangodisk" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "MangoDisk.app"
 
   zap trash: [

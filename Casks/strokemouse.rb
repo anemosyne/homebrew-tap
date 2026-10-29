@@ -12,6 +12,8 @@ cask "strokemouse" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "StrokeMouse.app"
 
   zap trash: [

@@ -4,13 +4,15 @@ cask "birth" do
 
   url "https://github.com/iAmCorey/birth/releases/download/v#{version}/Birth-#{version}.dmg"
   name "Birth"
-  desc "Open-source macOS startup items manager"
+  desc "Open-source startup items manager"
   homepage "https://github.com/iAmCorey/birth"
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "Birth.app"
 

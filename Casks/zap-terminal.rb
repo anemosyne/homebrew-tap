@@ -12,6 +12,8 @@ cask "zap-terminal" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Zap.app"
 
   zap trash: [

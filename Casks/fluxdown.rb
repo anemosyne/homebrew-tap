@@ -12,6 +12,8 @@ cask "fluxdown" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "FluxDown.app"
 
   zap trash: [

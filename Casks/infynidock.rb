@@ -4,13 +4,15 @@ cask "infynidock" do
 
   url "https://github.com/yeelone/InfyniDock/releases/download/#{version}/InfyniDock-Installer-#{version}.dmg"
   name "InfyniDock"
-  desc "Dock enhancement utility for macOS"
+  desc "Dock enhancement utility"
   homepage "https://github.com/yeelone/InfyniDock"
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "InfyniDock.app"
 
