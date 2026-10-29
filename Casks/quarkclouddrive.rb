@@ -14,7 +14,10 @@ cask "quarkclouddrive" do
   # 该接口按后端灰度返回，只有部分请求带 abiarm64 链接，所以扫全文；扫不到当次就报错，下次再试。
   livecheck do
     url "https://pan.quark.cn/api/client_version"
-    regex(%r{/(\d+)/quarkclouddrivemac/pckk@product_guanwang/QuarkCloudDriveMac_V(\d+(?:\.\d+)+)_mac_pf(\d+)_\(zh-cn\)_abiarm64_\(Build(\d+)\)\.dmg}i)
+    regex(%r{
+      /(\d+)/quarkclouddrivemac/pckk@product_guanwang/
+      QuarkCloudDriveMac_V(\d+(?:\.\d+)+)_mac_pf(\d+)_\(zh-cn\)_abiarm64_\(Build(\d+)\)\.dmg
+    }ix)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match.join(",") }
     end
