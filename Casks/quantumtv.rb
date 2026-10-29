@@ -1,6 +1,6 @@
 cask "quantumtv" do
-  version "0.7.5"
-  sha256 "cc788f710636e928ad88359661c21be5bfb708c91624bfaff989fd89f0b3ca5a"
+  version "0.7.7"
+  sha256 "efa7cc82d8d2cd67d031d8a7361a7e99916a335414f231f8dc600dce2fc265d0"
 
   url "https://github.com/Geon97/QuantumTV/releases/download/v#{version}/QuantumTV_#{version}_aarch64.dmg"
   name "QuantumTV"
