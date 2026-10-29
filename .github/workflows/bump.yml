@@ -30,14 +30,18 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           tap="${GITHUB_REPOSITORY/homebrew-/}"
 
+          # 个别 cask 查不到版本时 livecheck 会非零退出，不影响其余的
           # :latest 的 cask（tessoa、veilwin）没东西可 bump，livecheck 会跳过
-          brew livecheck --tap "$tap" --json --newer-only --quiet \
-            | jq -r '.[] | select(.version.outdated) | "\(.cask) \(.version.latest)"' \
+          brew livecheck --tap "$tap" --json --newer-only --quiet > livecheck.json || true
+
+          jq -r '.[] | select(.version.outdated) | "\(.cask) \(.version.latest)"' livecheck.json \
             | while read -r cask ver; do
                 echo "::group::$cask -> $ver"
-                brew bump-cask-pr --write-only --commit --no-audit --no-style \
-                  --version="$ver" "$tap/$cask" \
-                  || echo "::warning::$cask $ver bump 失败"
+                if ! brew bump-cask-pr --write-only --commit --no-audit --no-style \
+                  --version="$ver" "$tap/$cask"; then
+                  echo "::warning::$cask $ver bump 失败"
+                  git checkout -- Casks
+                fi
                 echo "::endgroup::"
               done
 
