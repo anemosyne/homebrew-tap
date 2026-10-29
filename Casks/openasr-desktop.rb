@@ -7,9 +7,11 @@ cask "openasr-desktop" do
   desc "Local-first speech-to-text with no cloud or telemetry"
   homepage "https://github.com/QuintinShaw/openasr"
 
+  # 同仓库还发 CLI（v*），只认 desktop-v* 标签
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^desktop[._-]v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases
   end
 
   app "OpenASR Desktop.app"

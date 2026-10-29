@@ -2,7 +2,7 @@ cask "okvideomac" do
   version "0.3.41"
   sha256 "3b469542cca39a8f82387fe8530420d977fd5d57706f9d67756249cd1873cfb0"
 
-  url "https://github.com/yaolin-dev/OKVideoMac/releases/download/v0.3.41-build65/OKVideoMac-#{version}-macOS-arm64.dmg"
+  url "https://github.com/yaolin-dev/OKVideoMac/releases/download/v#{version}/OKVideoMac-#{version}.dmg"
   name "OKVideoMac"
   desc "Native macOS video client with libmpv playback"
   homepage "https://github.com/yaolin-dev/OKVideoMac"

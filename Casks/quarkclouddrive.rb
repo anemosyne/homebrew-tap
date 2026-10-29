@@ -10,11 +10,12 @@ cask "quarkclouddrive" do
 
   # ⚠️ 别用 releasemini 变体（brewforge/chinese 就是这么错的）：那是 9M 的在线安装器外壳，
   # bundle id com.quark.clouddrive.macinstaller、版本恒为 1.0.1，每次启动只会弹「立即安装」。
-  # abiarm64 才是 733M 的 arm64 原生本体，bundle id com.quark.clouddrive.desktop。
+  # abiarm64 才是 arm64 原生本体，bundle id com.quark.clouddrive.desktop。
+  # origin_macDmgForArmUrl 现在也指向 releasemini 了，改读 macDmgForArmUrl。
   livecheck do
     url "https://pan.quark.cn/api/client_version"
     strategy :page_match do |page|
-      data = JSON.parse(page)["data"]["origin_macDmgForArmUrl"]
+      data = JSON.parse(page)["data"]["macDmgForArmUrl"]
       stem = "quarkclouddrivemac/pckk@product_guanwang/QuarkCloudDriveMac"
       regex(%r{/(\d{5})/#{stem}_V(\d+(?:\.\d+)+)_mac_pf(\d{5})_\(zh-cn\)_abiarm64_\(Build(\d{7})\)\.dmg}i)
       match = data.match(regex)

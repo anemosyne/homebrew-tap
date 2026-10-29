@@ -1,0 +1,44 @@
+name: bump
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # 每天 09:00 (UTC+8)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: bump
+
+jobs:
+  bump:
+    runs-on: macos-latest
+    env:
+      HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_ENV_HINTS: 1
+    steps:
+      - uses: actions/checkout@v7
+
+      # 把当前 checkout 链接成 tap，bump-cask-pr 直接改工作区
+      - id: brew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Bump outdated casks
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          tap="${GITHUB_REPOSITORY/homebrew-/}"
+
+          # :latest 的 cask（tessoa、veilwin）没东西可 bump，livecheck 会跳过
+          brew livecheck --tap "$tap" --json --newer-only --quiet \
+            | jq -r '.[] | select(.version.outdated) | "\(.cask) \(.version.latest)"' \
+            | while read -r cask ver; do
+                echo "::group::$cask -> $ver"
+                brew bump-cask-pr --write-only --commit --no-audit --no-style \
+                  --version="$ver" "$tap/$cask" \
+                  || echo "::warning::$cask $ver bump 失败"
+                echo "::endgroup::"
+              done
+
+          git push

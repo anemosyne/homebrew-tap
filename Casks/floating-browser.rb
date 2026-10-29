@@ -8,8 +8,8 @@ cask "floating-browser" do
   homepage "https://floating-browser.xyptkd.cn"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url :homepage
+    regex(/floating-browser[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]arm64\.dmg/i)
   end
 
   app "悬浮浏览器.app"

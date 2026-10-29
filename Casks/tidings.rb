@@ -8,8 +8,8 @@ cask "tidings" do
   homepage "https://tidings.info"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://download.tidings.info/macos/stable/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Tidings.app"

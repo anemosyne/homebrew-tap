@@ -8,8 +8,8 @@ cask "kubebar" do
   homepage "https://kubebar.app"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url :homepage
+    regex(/Kubebar[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Kubebar.app"
