@@ -8,10 +8,11 @@ cask "kubebar" do
   homepage "https://kubebar.app/"
 
   livecheck do
-    url :homepage
-    regex(/Kubebar[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://kubebar.app/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on :macos
 
   app "Kubebar.app"

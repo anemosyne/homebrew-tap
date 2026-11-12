@@ -14,6 +14,7 @@ cask "openasr-desktop" do
     strategy :github_releases
   end
 
+  auto_updates true
   depends_on :macos
 
   app "OpenASR Desktop.app"

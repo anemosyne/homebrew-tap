@@ -8,10 +8,13 @@ cask "veilwin" do
   homepage "https://www.veilwin.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://download.floweb.cn/veilwin-latest.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
+  auto_updates true
   depends_on :macos
 
   app "veilwin.app"
