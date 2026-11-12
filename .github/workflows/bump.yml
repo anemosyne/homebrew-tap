@@ -1,0 +1,49 @@
+name: bump
+
+on:
+  schedule:
+    - cron: "0 1 * * 1" # 每周一 09:00 (UTC+8)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: bump
+
+jobs:
+  bump:
+    runs-on: macos-latest
+    env:
+      HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_ENV_HINTS: 1
+    steps:
+      - uses: actions/checkout@v7
+
+      # 把当前 checkout 链接成 tap，bump-cask-pr 直接改工作区
+      - id: brew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Bump outdated casks
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          tap="${GITHUB_REPOSITORY/homebrew-/}"
+
+          # 个别 cask 查不到版本时 livecheck 会非零退出，不影响其余的
+          # --extract-plist：tessoa、veilwin 的 URL 不含版本，要下载 dmg 读 Info.plist
+          brew livecheck --tap "$tap" --extract-plist --json --newer-only --quiet > livecheck.json || true
+
+          jq -r '.[] | select(.version.outdated) | "\(.cask) \(.version.latest)"' livecheck.json \
+            | while read -r cask ver; do
+                echo "::group::$cask -> $ver"
+                if ! brew bump-cask-pr --write-only --commit --no-audit --no-style \
+                  --version="$ver" "$tap/$cask"; then
+                  echo "::warning::$cask $ver bump 失败"
+                  git checkout -- Casks
+                fi
+                echo "::endgroup::"
+              done
+
+          # setup-homebrew 会重置 checkout 存的凭据，这里显式带 token
+          git push "https://x-access-token:${HOMEBREW_GITHUB_API_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:$GITHUB_REF_NAME"
