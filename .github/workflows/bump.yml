@@ -32,7 +32,8 @@ jobs:
 
           # 个别 cask 查不到版本时 livecheck 会非零退出，不影响其余的
           # --extract-plist：tessoa、veilwin 的 URL 不含版本，要下载 dmg 读 Info.plist
-          brew livecheck --tap "$tap" --extract-plist --json --newer-only --quiet > livecheck.json || true
+          brew livecheck --tap "$tap" --extract-plist --json --newer-only > livecheck.json || true
+          jq -r '.[] | select(.status == "error") | "::warning::livecheck \(.cask): \(.messages | join("; "))"' livecheck.json
 
           jq -r '.[] | select(.version.outdated) | "\(.cask) \(.version.latest)"' livecheck.json \
             | while read -r cask ver; do
