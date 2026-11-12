@@ -19,7 +19,7 @@ casks = [ "anemosyne/tap/tty7" ];
 ## 约定
 
 - **只放 arm64（Apple Silicon）资产**。本机是 aarch64-darwin，不做 Intel 兼容。
-- **上游 URL 不含版本号**的（tessoa、veilwin）写真实 `version` + `sha256 :no_check`，
+- **上游 URL 不含版本号**的（veilwin）写真实 `version` + `sha256 :no_check`，
   livecheck 用 `:extract_plist` 下载 dmg 读版本。URL 永远指向 latest，无法固定校验和。
   ⚠️ 这类没有完整性校验。
 - 每个 cask 都带 `livecheck`，可用 `brew livecheck --cask anemosyne/tap/<name>` 查上游新版。
