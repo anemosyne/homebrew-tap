@@ -1,6 +1,6 @@
 cask "fovelle" do
-  version "1.3.7"
-  sha256 "1e955d058fb1c315072fe0c4add39e468ee40d16dae4fc0f63f6b2f52f9d0734"
+  version "1.4.2"
+  sha256 "0044e77c25860e2d36c94476f3ca2aa3b56018387767cb192cd28f244574bf53"
 
   url "https://github.com/inostarlin-passion/Fovelle/releases/download/v#{version}/Fovelle-v#{version}-macOS-universal.zip"
   name "Fovelle"
