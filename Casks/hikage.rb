@@ -1,6 +1,6 @@
 cask "hikage" do
-  version "0.10.1"
-  sha256 "e5f52a8b04bb49a212d7c0500f0315c64c8371abfd1d7ba4f3ce73d4aa441151"
+  version "0.10.2"
+  sha256 "5c385145368759bc699bce082a4fbeaf37ec53a5c2e844ee6cc04dd5e0d188d8"
 
   url "https://downloads.hikage.app/app.hikage.Hikage/stable/Hikage-#{version}-macOS.zip"
   name "Hikage"
