@@ -1,6 +1,6 @@
 cask "touchx" do
-  version "1.0.7,118"
-  sha256 "ea808f1db58003e1d4cb8a3901c43097daa6710ed19a413c87782fb6363a0de9"
+  version "1.0.8,127"
+  sha256 "414fdb1a89f0ed22b00b445a9d7ced24cab0b1d0fc23cf2c29eae01a4c96fca0"
 
   url "https://touchx.cc/downloads/TouchX-#{version.csv.second}.dmg"
   name "TouchX"
