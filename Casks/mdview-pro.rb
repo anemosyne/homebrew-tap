@@ -1,6 +1,6 @@
 cask "mdview-pro" do
-  version "2.0.21"
-  sha256 "d0647110fc96144b4b36e27e144da7ea6493007385bf4456b27c66fcae591d0b"
+  version "2.0.31"
+  sha256 "cf248cfeda7b366d36c5e9f58a09bf66699a48abaacb7324743000c345c33111"
 
   url "https://www.mdview.cn/download/mdview-macos-pro-#{version}.dmg"
   name "mdview Pro"
