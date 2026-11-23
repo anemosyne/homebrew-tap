@@ -1,6 +1,6 @@
 cask "minimoon" do
-  version "4.4,40040"
-  sha256 "9d116cc1107bf330272816f28c54028011a20f3363a830eacdd209747e2d158c"
+  version "4.5,40050"
+  sha256 "7a2cbac80dce6d70c617d2ce6c525b3ec2685906fbb36e40c815b28b4b409cd2"
 
   url "https://minimoon-dist.plastaq.com/MiniMoon-#{version.csv.first}+#{version.csv.second}.dmg"
   name "MiniMoon"
