@@ -1,6 +1,6 @@
 cask "tidings" do
-  version "1.1.24"
-  sha256 "0166cfc82311e7931b7e9d22e295fde44d25d1f0306d726f6f6c608534a2a50b"
+  version "1.1.25"
+  sha256 "b96bbeeead717069d23969e2d6cb8052ea262039c0da8796280eaae0a0ffd390"
 
   url "https://download.tidings.info/macos/stable/Tidings-#{version}-universal.dmg"
   name "Tidings"
