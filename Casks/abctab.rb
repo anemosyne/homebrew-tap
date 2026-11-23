@@ -1,6 +1,6 @@
 cask "abctab" do
-  version "1.4.0"
-  sha256 "06ddedceb0b37b4dcf60c91684aa8a4bccc86bb5f66111ee5265ddad793f6552"
+  version "1.5.0"
+  sha256 "935cc38afd2a624f746f74421fef5640af2181e51397f4a90b675e40c18da8c8"
 
   url "https://solocraft.app/downloads/AbcTab-#{version}.dmg"
   name "AbcTab"
