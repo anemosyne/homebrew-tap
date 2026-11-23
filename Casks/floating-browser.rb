@@ -1,6 +1,6 @@
 cask "floating-browser" do
-  version "0.2.4"
-  sha256 "190c05eda4bf352b080fd142b4a490caa868e2c84ed958ad6797ea6abc2c94b6"
+  version "0.2.11"
+  sha256 "9ee96a55c900649a107620ea3aa5f5e4cd53a6d9ef201f08b201fd40a167b1ff"
 
   url "https://floating-browser.xyptkd.cn/downloads/floating-browser-#{version}-macos-arm64.dmg"
   name "悬浮浏览器"
