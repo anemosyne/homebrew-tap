@@ -1,6 +1,6 @@
 cask "mind-elixir" do
-  version "1.11.3"
-  sha256 "6b0da4aea1e93104bb0c615a25bd6e52f9548309a6dc350b48c5ecb01fad52b0"
+  version "1.12.0"
+  sha256 "2693e00c7c8b08e2f7327683f357e74afe79da4077488f2fa6a627770ca29c70"
 
   url "https://github.com/SSShooter/Mind-Elixir-Desktop-Release/releases/download/v#{version}/Mind.Elixir_#{version}_aarch64.dmg"
   name "Mind Elixir"
