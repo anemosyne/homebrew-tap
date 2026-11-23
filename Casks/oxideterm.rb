@@ -1,6 +1,6 @@
 cask "oxideterm" do
-  version "2.3.3"
-  sha256 "6a0bb614a3c626a8fbb86e210264d0d657b204820c055da7d277e9461a0fb631"
+  version "2.4.0"
+  sha256 "db12a80afe4dd0ff416bb322db3b4212f3edf6f0ead3de45e0e9b1785aad51ef"
 
   url "https://github.com/AnalyseDeCircuit/oxideterm/releases/download/v#{version}/OxideTerm_#{version}_macos_arm64.dmg"
   name "OxideTerm"
