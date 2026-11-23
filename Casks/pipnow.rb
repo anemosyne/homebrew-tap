@@ -1,6 +1,6 @@
 cask "pipnow" do
-  version "1.0.8,433"
-  sha256 "09fe7e8f15ac9e9510eb46b6e9bb98a37b2d0044c6c40f97b9821cda04af5095"
+  version "1.0.9,440"
+  sha256 "67e5916e8e2aca7280a114ed69b7aca99026d0c9dd064ba8641a23d7dcf6177c"
 
   url "https://dl.pipnow.app/PipNow-#{version.csv.first}-b#{version.csv.second}.dmg"
   name "PipNow"
