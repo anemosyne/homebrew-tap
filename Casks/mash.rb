@@ -1,6 +1,6 @@
 cask "mash" do
-  version "0.30.0"
-  sha256 "279b123882dea5926c9e047a0d967d5d281c556a0940aac7bc00638d79ee029b"
+  version "0.33.0"
+  sha256 "e290ce60b18eb58485687da5d155acfe63cfc3d3b5b87cfcda784129b453e39a"
 
   url "https://github.com/ZaiZheTingDun/mash-app/releases/download/v#{version}/Mash_#{version}_aarch64.dmg"
   name "Mash"
