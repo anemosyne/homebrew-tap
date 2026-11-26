@@ -1,6 +1,6 @@
 cask "glide-ai" do
-  version "1.1.12"
-  sha256 "ecac2e5884773c065d7a4cc457addb66e8cd79f7a4d26c0f6c1612316b3f1dce"
+  version "1.1.17"
+  sha256 "c780f9c4a6b2803958dc6b298f484dd2a79e619bac3f5351763d8454c2b76fbb"
 
   url "https://glide-ai.fun/downloads/Glide_v#{version}_arm64.dmg"
   name "Glide"
