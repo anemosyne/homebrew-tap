@@ -1,6 +1,6 @@
 cask "mflare" do
-  version "0.11.0"
-  sha256 "bc876ca4f83c47df24993517e5b2daecae22e734eaac4bca0b7ac71fee2e86bb"
+  version "0.11.1"
+  sha256 "40977f12600636fbdc85e0faf7a9f6a173cec8283410fc3e800ff64c8acf38d6"
 
   url "https://releases.yuy1n.io/mflare/MFlare-#{version}.zip"
   name "MFlare"
