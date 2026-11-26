@@ -39,8 +39,15 @@ jobs:
                 echo "::group::$cask -> $ver"
                 if ! brew bump-cask-pr --write-only --commit --no-audit --no-style \
                   --version="$ver" "$tap/$cask"; then
-                  echo "::warning::$cask $ver bump 失败"
                   git checkout -- Casks
+                  # ponytail: tessoa 下载站拒绝 GitHub runner；更新清单自带 sha256，直接写入。别的站也这样时再泛化
+                  if [ "$cask" = tessoa ] && sha=$(curl -fsSL https://download.tessoa.com/tessoa/latest.json \
+                      | jq -er --arg v "$ver" 'select(.version == $v) | .platforms[] | select(.asset == "tessoa-macos-aarch64.dmg") | .sha256'); then
+                    sed -i '' -e "s/^  version \".*\"/  version \"$ver\"/" -e "s/^  sha256 \".*\"/  sha256 \"$sha\"/" Casks/tessoa.rb
+                    git commit -qm "tessoa $ver" Casks/tessoa.rb
+                  else
+                    echo "::warning::$cask $ver bump 失败"
+                  fi
                 fi
                 echo "::endgroup::"
               done

@@ -1,6 +1,6 @@
 cask "tessoa" do
-  version "0.31.0"
-  sha256 "6f2c6ca8377c455a3d8d0b53d040c448d1454eff2f55210da380fdfcc6ad4509"
+  version "0.32.0"
+  sha256 "2d849ec9e65ee4dba9f0f0c35023f6aaacdceb29b7a324aec7a48b711a5f9b0c"
 
   url "https://download.tessoa.com/tessoa/v#{version}/tessoa-macos-aarch64.dmg"
   name "tessoa"
