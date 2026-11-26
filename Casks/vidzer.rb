@@ -1,6 +1,6 @@
 cask "vidzer" do
-  version "1.2.0"
-  sha256 "cc21252f5ac8ec0f83f503ccedaca278e34c124feee2a2aa414c434448efd8ba"
+  version "1.2.1"
+  sha256 "a2d53ba64fee0152aecdd331eb224da14bdbdae42baf4d93cb19e8063766ec46"
 
   url "https://github.com/vidzer-app/vidzer-releases/releases/download/v#{version}/Vidzer-#{version}-macos-arm64.dmg"
   name "Vidzer"
