@@ -1,6 +1,6 @@
 cask "imference-desktop-go" do
-  version "0.6.1"
-  sha256 "ced674eab195fa4f5be88ceea80f15ba40989cf9382bd693c864d3fe16e2095a"
+  version "0.7.0"
+  sha256 "704cb286ece09e9fe353ebb580461baacf41b35d8f59a3a026c054ef42b87a5c"
 
   url "https://github.com/Publikey/imference-desktop/releases/download/v#{version}/imference-desktop-go-macos-universal.dmg"
   name "imference-desktop-go"
